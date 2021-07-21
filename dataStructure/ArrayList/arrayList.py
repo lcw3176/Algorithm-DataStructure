@@ -1,17 +1,24 @@
-from cArray import Array
+from c_array import Array
 
 
 class ArrayList:
     def __init__(self):
-        self.size = 10
+        self.count = 10
         self.index = 0
-        self.arr = Array(self.size)
+        self.arr = Array(self.count)
 
     def get(self, index):
+        if index >= self.index:
+            raise Exception("인덱스 초과")
+
         return self.arr[index]
 
     def remove(self, index):
         self.arr[index] = None
+        for i in range(index, len(self.arr) - 1):
+            self.arr[i] = self.arr[i + 1]
+
+        self.index = len(self.arr) - 1
 
     def contains(self, element):
         for i in self.arr:
@@ -21,15 +28,19 @@ class ArrayList:
         return False
 
     def add(self, element):
-        if self.index >= self.size:
-            self.size += 10
-            self.arr = Array(self.size)
+        if self.index >= self.count:
+            self.count *= 2
+            temp = self.arr
+            self.arr = Array(self.count)
+
+            for i in range(len(temp)):
+                self.arr[i] = temp[i]
         
         self.arr[self.index] = element
         self.index += 1
 
     def clear(self):
-        for i in range(self.arr):
+        for i in range(len(self.arr)):
             self.arr[i] = None
         
         self.index = 0
