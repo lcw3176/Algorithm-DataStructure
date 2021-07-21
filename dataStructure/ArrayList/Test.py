@@ -1,4 +1,4 @@
-from arrayList import ArrayList
+from array_list import ArrayList
 
 if __name__ == "__main__":
     arr = ArrayList()
