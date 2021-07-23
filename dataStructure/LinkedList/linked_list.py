@@ -57,16 +57,15 @@ class LinkedList:
         prev = None
 
         while count != index:
+            prev = node
             node = node.next
             count += 1
         
-        while node != self.tail:
-            prev = node
-            node.data = node.next.data
-            node = node.next
-        
-        prev.next = None
-        self.tail = prev
+        if node == self.head:
+            self.head = node.next
+        else:
+            prev.next = node.next
+
         self.length -= 1
 
 
@@ -104,9 +103,7 @@ class LinkedList:
 
     def display(self):
         node = self.head
-        test = 0
-        while test != self.length:
+        while node.data != None:
             print(node.data, end=" ")
             node = node.next
-            test += 1
         print()
