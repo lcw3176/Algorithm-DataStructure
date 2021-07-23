@@ -1,4 +1,4 @@
-# 코딩 테스트 준비
+# Algorithm&DataStructure
 
 ## Language
 * Python 3
