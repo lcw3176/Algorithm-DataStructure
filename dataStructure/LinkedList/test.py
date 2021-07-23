@@ -7,7 +7,7 @@ for i in range(100):
 ls.display()
 
 for i in range(20):
-    ls.remove(0)
+    ls.remove(15)
 
 ls.display()
 
@@ -28,3 +28,4 @@ for i in range(100):
 print(ls.size())
 print(ls.indexOf(5))
 print(ls.indexOf(125))
+ls.display()
