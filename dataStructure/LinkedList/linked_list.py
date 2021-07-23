@@ -3,43 +3,42 @@ class Node:
         self.data = None
         self.next = None
 
+
 class LinkedList:
     def __init__(self):
         self.head = None
+        self.tail = Node()
         self.length = 0
     
 
     def __add_first(self, data):
-        node = Node()
-        node.data = data
-        node.next = None
+        first_node = Node()
+        first_node.data = data
+        first_node.next = self.tail
         
-        self.head = node
+        self.head = first_node
         self.length += 1
 
 
-    def __add_next(self, data, node):
-        new_node = Node()
-        new_node.data = data
+    def __add_last(self, data):
+        new_tail_node = Node()
 
-        while node.next != None:
-            node = node.next
+        self.tail.data = data
+        self.tail.next = new_tail_node
+        self.tail = self.tail.next
         
-        node.next = new_node
         self.length += 1
 
 
     def add(self, data):
-        node = self.head
-
-        if node == None:
+        if self.head == None or self.head.data == None:
             self.__add_first(data)
         else:
-            self.__add_next(data, node)
+            self.__add_last(data)
     
 
     def get(self, index):
-        if index >= self.length:
+        if index >= self.length or self.length == 0:
             raise Exception("인덱스 초과")
         
         node = self.head
@@ -50,27 +49,24 @@ class LinkedList:
 
 
     def remove(self, index):
-        if index >= self.length:
+        if index >= self.length or self.length == 0:
             raise Exception("인덱스 초과")
         
+        count = 0
         node = self.head
         prev = None
 
-        for _ in range(index):
+        while count != index:
+            node = node.next
+            count += 1
+        
+        while node != self.tail:
             prev = node
-            node = node.next            
-
-        for _ in range(index, self.length - 1):
-            temp = node.next     
-            node.data = temp.data 
-            prev = node
+            node.data = node.next.data
             node = node.next
         
-        if self.length == 1:
-            self.head = None
-        else:
-            prev.next = None
-        
+        prev.next = None
+        self.tail = prev
         self.length -= 1
 
 
@@ -105,10 +101,12 @@ class LinkedList:
         
         return -1
 
+
     def display(self):
         node = self.head
-        
-        while node:
+        test = 0
+        while test != self.length:
             print(node.data, end=" ")
             node = node.next
+            test += 1
         print()
