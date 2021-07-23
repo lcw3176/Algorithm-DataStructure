@@ -24,7 +24,7 @@
 * 자바 제네릭 사용 가능, 재량
 ```Java
 // Object로 선언됨
-LinkedList list = new ArrayList(); 
+LinkedList list = new LinkedList(); 
 
 // 타입 설정
 LinkedList<Integer> numList = new LinkedList<Integer>(); 
