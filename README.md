@@ -11,5 +11,6 @@
 * 다양한 자료구조를 직접 구현해보는 식으로 해볼 예정
 - 현재 구현 목록
     - List
-        - ArrayList (21.07.22)
-        - LinkedList (21.07.23)
+        - [ArrayList](https://github.com/lcw3176/Algorithm-DataStructure/tree/master/dataStructure/ArrayList) 
+        - [LinkedList](https://github.com/lcw3176/Algorithm-DataStructure/tree/master/dataStructure/LinkedList) 
+        - [Stack](https://github.com/lcw3176/Algorithm-DataStructure/tree/master/dataStructure/Stack) 
