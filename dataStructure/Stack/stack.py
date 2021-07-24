@@ -40,7 +40,7 @@ class Stack:
         if self.isEmpty():
             raise Exception("Empty Stack")
         
-        return self.lst.pop()
+        return self.lst[-1]
 
 
     def isEmpty(self):
