@@ -13,5 +13,5 @@
     - List
         - [ArrayList](https://github.com/lcw3176/Algorithm-DataStructure/tree/master/dataStructure/ArrayList) 
         - [LinkedList](https://github.com/lcw3176/Algorithm-DataStructure/tree/master/dataStructure/LinkedList) 
-        - [Stack](https://github.com/lcw3176/Algorithm-DataStructure/tree/master/dataStructure/Stack) 
-        - [Queue](https://github.com/lcw3176/Algorithm-DataStructure/tree/master/dataStructure/Queue)
+    - [Stack](https://github.com/lcw3176/Algorithm-DataStructure/tree/master/dataStructure/Stack) 
+    - [Queue](https://github.com/lcw3176/Algorithm-DataStructure/tree/master/dataStructure/Queue)
