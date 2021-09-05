@@ -19,3 +19,4 @@
     - [Queue](https://github.com/lcw3176/Algorithm-DataStructure/tree/master/dataStructure/Queue)
     - [Deque](https://github.com/lcw3176/Algorithm-DataStructure/tree/master/dataStructure/Deque)
     - [Heap](https://github.com/lcw3176/Algorithm-DataStructure/tree/master/dataStructure/Heap)
+    - [Tree](https://github.com/lcw3176/Algorithm-DataStructure/tree/master/dataStructure/Tree)
