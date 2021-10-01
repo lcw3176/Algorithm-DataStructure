@@ -28,4 +28,4 @@
 - 하드웨어적 특징 약간, 소프트웨어적 특징 공부
 - 현재 학습 목록
     - Memory
-        - [DRAM]()
+        - [DRAM](https://github.com/lcw3176/Algorithm-DataStructure/tree/master/computerArchitecture/memory/DRAM)
