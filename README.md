@@ -10,6 +10,7 @@
     - [재귀](https://github.com/lcw3176/Algorithm-DataStructure/tree/master/algorithm/representative/recursion)
     - [BFS](https://github.com/lcw3176/Algorithm-DataStructure/tree/master/algorithm/representative/bfs)
     - [DFS](https://github.com/lcw3176/Algorithm-DataStructure/tree/master/algorithm/representative/dfs)
+    - [Dijkstra](https://github.com/lcw3176/Algorithm-DataStructure/tree/master/algorithm/representative/dijkstra)
 # DataStructure
 - 다양한 자료구조를 직접 구현해보는 식으로 해볼 예정
 - 각 README에 기록된 Big-O 는 시간 복잡도를 기준으로 작성
@@ -22,3 +23,9 @@
     - [Deque](https://github.com/lcw3176/Algorithm-DataStructure/tree/master/dataStructure/Deque)
     - [Heap](https://github.com/lcw3176/Algorithm-DataStructure/tree/master/dataStructure/Heap)
     - [Tree](https://github.com/lcw3176/Algorithm-DataStructure/tree/master/dataStructure/Tree)
+# ComputerArchitecture
+- 컴퓨터 구조 공부
+- 하드웨어적 특징 약간, 소프트웨어적 특징 공부
+- 현재 학습 목록
+    - Memory
+        - [DRAM]()
