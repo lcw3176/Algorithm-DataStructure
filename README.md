@@ -32,3 +32,9 @@
         - [제어유닛](https://github.com/lcw3176/CS-CE-Study/tree/master/computerArchitecture/cpu/CONTROL_UNIT)
     - Memory
         - [DRAM](https://github.com/lcw3176/Algorithm-DataStructure/tree/master/computerArchitecture/memory/DRAM)
+
+# OperatingSystem
+- 운영체제 공부
+- 전반적인 운영체제, 리눅스 커널 약간
+- 현재 학습 목록
+    - [process](https://github.com/lcw3176/CS-CE-Study/tree/master/operatingSystem/process)
