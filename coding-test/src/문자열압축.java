@@ -1,61 +1,93 @@
+import java.util.*;
+
 public class 문자열압축 {
     public static void main(String[] args) {
-        solution("aabbaccc");
-        solution("ababcdcdababcdcd");
-        solution("abcabcdede");
-        solution("abcabcabcabcdededededede");
-        solution("xababcdcdababcdcd");
+//        System.out.println(solution(""));
+        System.out.println(solution(""));
+        System.out.println(solution("aabbaccc"));
+        System.out.println(solution("ababcdcdababcdcd"));
+        System.out.println(solution("abcabcdede"));
+        System.out.println(solution("abcabcabcabcdededededede"));
+        System.out.println(solution("xababcdcdababcdcd"));
     }
 
     public static int solution(String s) {
-        int piece = 1;
-
         StringBuilder sb = new StringBuilder();
+        StringBuilder temp = new StringBuilder();
 
-        for(int i = 1; i <= s.length() / 2; i++){
-            String data = s.substring(0, i);
+        Stack<String> stack = new Stack<>();
+        int index = 1;
+        int minLength = 2000;
 
-            for(int j = i; j < s.length(); j++){
-                if(j + j > s.length()){
-                    break;
-                }
+        if(s.length() <= 1){
+            return s.length();
+        }
 
-                sb.append(s, j, j + j);
-                if(data.equals(sb.toString())){
-                    piece = i;
+        while (index <= s.length() / 2){
+            int count = 0;
+
+            for(int i = 0; i < s.length(); i++){
+                temp.append(s, i, i + 1);
+                count++;
+
+                if(count == index){
+                    stack.push(temp.toString());
+                    temp.setLength(0);
+                    count = 0;
                 }
             }
 
+            if(temp.length() > 0){
+                stack.push(temp.toString());
+                temp.setLength(0);
+            }
+
+            String recentValue = stack.pop();
+            int size = stack.size();
+            HashMap<String, Integer> map = new HashMap<>();
+
+
+            for(int i = 0; i < size; i++){
+                String oldValue = stack.pop();
+
+                if(recentValue.equals(oldValue)){
+                    if(map.containsKey(recentValue)){
+                        map.put(recentValue, map.get(recentValue) + 1);
+                    } else {
+                        map.put(recentValue, 2);
+                    }
+                } else {
+                    if(map.containsKey(recentValue)){
+                        sb.insert(0, recentValue);
+                        sb.insert(0, map.get(recentValue));
+                        map.put(recentValue, 0);
+                    } else {
+                        sb.insert(0, recentValue);
+                    }
+                }
+
+                if(stack.size() == 0){
+                    if(map.containsKey(oldValue)){
+                        sb.insert(0, oldValue);
+                        sb.insert(0, map.get(oldValue));
+                        map.put(oldValue, 0);
+                    } else {
+                        sb.insert(0, oldValue);
+                    }
+                }
+
+                recentValue = oldValue;
+            }
+
+            index++;
+
+            if(sb.length() < minLength){
+                minLength = sb.length();
+                System.out.println(sb);
+            }
             sb.setLength(0);
         }
 
-        String beforeValue = s.substring(0, piece);
-        int count = 0;
-
-        for(int i = piece; i < s.length(); i += piece){
-            if(i + piece > s.length()){
-                sb.append(s, i, s.length());
-                break;
-            }
-
-            String temp = s.substring(i, i + piece);
-
-            if(temp.equals(beforeValue)){
-                count++;
-            } else {
-                if(count > 1){
-                    sb.append(count);
-                }
-
-                sb.append(beforeValue);
-                count = 0;
-            }
-
-            beforeValue = temp;
-        }
-
-        System.out.println(sb);
-
-        return 1;
+        return minLength;
     }
 }
