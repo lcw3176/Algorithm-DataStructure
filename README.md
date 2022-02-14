@@ -39,3 +39,25 @@
 - 전반적인 운영체제, 리눅스 커널 약간
 - 현재 학습 목록
     - [process](https://github.com/lcw3176/CS-CE-Study/tree/master/operatingSystem/process)
+
+### 할일
+#### 자바 mutable immutable
+- String
+- StringBuilder, StringBuffer
+
+#### DB
+- 멀티인덱싱
+- 인덱싱
+- ElasticSearch
+- LIKE
+#### http https 암호화
+#### 스프링 session 구별
+#### Bean Scope
+- 1개의 컨트롤러로 다수의 요청 처리 문제
+- 다수의 사용자가 하나의 객체에 진입 시도 문제
+#### 알람 문제
+- 트위터
+- 유튜브
+
+#### Java 8 Java 11
+- Stream, Lambda, Nashorn
