@@ -61,3 +61,8 @@
 
 #### Java 8 Java 11
 - Stream, Lambda, Nashorn
+
+#### Spring
+- Bean, Component
+
+#### Redisson
