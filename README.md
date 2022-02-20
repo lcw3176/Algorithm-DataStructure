@@ -40,10 +40,10 @@
 - 현재 학습 목록
     - [process](https://github.com/lcw3176/CS-CE-Study/tree/master/operatingSystem/process)
 
+# Java
+- mutable vs immutable
+
 ### 할일
-#### 자바 mutable immutable
-- String
-- StringBuilder, StringBuffer
 
 #### DB
 - 멀티인덱싱
@@ -59,8 +59,10 @@
 - 트위터
 - 유튜브
 
-#### Java 8 Java 11
+#### Java 8 
 - Stream, Lambda, Nashorn
+
+#### Java 11
 
 #### Spring
 - Bean, Component
