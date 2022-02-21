@@ -41,7 +41,12 @@
     - [process](https://github.com/lcw3176/CS-CE-Study/tree/master/operatingSystem/process)
 
 # Java
-- mutable vs immutable
+- [mutable vs immutable](https://github.com/lcw3176/CS-CE-Study/blob/master/java/mutable_immutable.md)
+
+# DB
+- index
+- transaction
+
 
 ### 할일
 
@@ -60,7 +65,7 @@
 - 유튜브
 
 #### Java 8 
-- Stream, Lambda, Nashorn
+- Stream, Lambda, Nashorn, perm(heap) -> metaspace(native)
 
 #### Java 11
 
