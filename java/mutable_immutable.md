@@ -2,6 +2,8 @@
 ## String
 
 <div style="text-align:center;">
+<img src="https://t1.daumcdn.net/cfile/tistory/99948B355E2F13350F">
+<p>출처: https://ifuwanna.tistory.com/221</p>
 <image src="https://dz2cdn1.dzone.com/storage/temp/14332760-java-7-8-memory.jpg">
 <p>출처: https://dzone.com/articles/native-memory-may-cause-unknown-memory-leaks</p>
 </div>
@@ -67,3 +69,22 @@
 - 같은 값의 빈번한 조회 시 사용
 
 ## StringBuilder, StringBuffer
+<div style="text-align:center;">
+
+<img src="https://t1.daumcdn.net/cfile/tistory/9923A9505E2F133608">
+<p>출처: https://ifuwanna.tistory.com/221</p>
+</div>
+
+### 공통점
+- mutable 객체
+- 동일 객채 내에서 문자열 변경 가능
+- 추가, 수정, 삭제 빈번한 작업 시 사용
+
+### 차이점
+- StringBuilder
+    - 동기화 X
+    - 성능 상대적으로 좋음
+
+- StringBuffer
+    - 내부 메소드에 synchronized 붙어있음, 동기화 O
+    - 성능 상대적으로 안좋음
