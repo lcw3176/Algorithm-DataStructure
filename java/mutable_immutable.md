@@ -1,28 +1,34 @@
 # Mutable - Immutable
 ## String
+
 <div style="text-align:center;">
-<image src="https://img1.daumcdn.net/thumb/R1280x0.fpng/?fname=http://t1.daumcdn.net/brunch/service/user/xTa/image/a-dK-z0Ot2TCAyoDM_Db9KTTD8g.png">
-<p>출처: https://brunch.co.kr/@kd4/1</p>
+<image src="https://dz2cdn1.dzone.com/storage/temp/14332760-java-7-8-memory.jpg">
+<p>출처: https://dzone.com/articles/native-memory-may-cause-unknown-memory-leaks</p>
 </div>
 
+- String은 Metaspace 영역에서 관리됨.
+- 기존의 heap에서 native 메모리 영역으로 옮김
+- os 레벨에서 관리하므로, 메모리 확보가 용이해짐
 
 ```java
   public static void main(String[] args) {
         String immutable = "hello";
         String shallowCopy = immutable;
+        String immutable1 = "hello";
         String staticImmutable = new String("hello");
         String constant = "constant";
         String staticConstant = new String("constant");
+        String constant2 = "constant";
         String brandNew = new String("good");
         String brandNewGood = new String("good");
         String brandNewTwo = new String("goodTwo");
         String brandNewGoodTwo = new String("goodTwo");
 
         printHash(
-            immutable, shallowCopy, staticImmutable, 
-            constant, staticConstant, 
-            brandNew,brandNewGood, 
-            brandNewTwo, brandNewGoodTwo);
+                immutable, shallowCopy, immutable1, staticImmutable,
+                constant, staticConstant, constant2,
+                brandNew,brandNewGood,
+                brandNewTwo, brandNewGoodTwo);
     }
 
     public static void printHash(String... data){
@@ -38,17 +44,26 @@
 ```java
 ## result
 
-데이터: hello       해시코드: 99162322      객체주소: 2052915500
-데이터: hello       해시코드: 99162322      객체주소: 2052915500
-데이터: hello       해시코드: 99162322      객체주소: 1121172875
-데이터: constant    해시코드: -567811164    객체주소: 649734728
-데이터: constant    해시코드: -567811164    객체주소: 1595953398
-데이터: good        해시코드: 3178685       객체주소: 998351292
-데이터: good        해시코드: 3178685       객체주소: 1684106402
-데이터: goodTwo     해시코드: 207008847     객체주소: 335471116
-데이터: goodTwo     해시코드: 207008847     객체주소: 1308927845
+데이터: hello       해시코드: 99162322      객체주소: 2129789493
+데이터: hello       해시코드: 99162322      객체주소: 2129789493
+데이터: hello       해시코드: 99162322      객체주소: 2129789493
+데이터: hello       해시코드: 99162322      객체주소: 668386784
+데이터: constant    해시코드: -567811164    객체주소: 1329552164
+데이터: constant    해시코드: -567811164    객체주소: 363771819
+데이터: constant    해시코드: -567811164    객체주소: 1329552164
+데이터: good        해시코드: 3178685       객체주소: 2065951873
+데이터: good        해시코드: 3178685       객체주소: 1791741888
+데이터: goodTwo     해시코드: 207008847     객체주소: 1595428806
+데이터: goodTwo     해시코드: 207008847     객체주소: 1072408673
 ```
 
 - 대표적인 Immutable 객체
+- 큰따옴표("")로 선언된 String
+    - String pool에 문자열 등록
+    - 같은 값이면 계속 참조
+- 생성자(new)로 선언된 String
+    - 별개의 String을 생성
+- 다른 패턴의 문자열 반복 연산 작업 등은 피해야 함
+- 같은 값의 빈번한 조회 시 사용
 
 ## StringBuilder, StringBuffer
