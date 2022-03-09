@@ -46,15 +46,12 @@
 # DB
 - index
 - transaction
-
+- 멀티인덱싱
+- ElasticSearch
+- LIKE
 
 ### 할일
 
-#### DB
-- 멀티인덱싱
-- 인덱싱
-- ElasticSearch
-- LIKE
 #### http https 암호화
 #### 스프링 session 구별
 #### Bean Scope
@@ -65,9 +62,10 @@
 - 유튜브
 
 #### Java 8 
-- Stream, Lambda, Nashorn, perm(heap) -> metaspace(native)
+- Stream, Lambda, Nashorn
 
 #### Java 11
+- HttpClient, String.isBlank()...
 
 #### Spring
 - Bean, Component
