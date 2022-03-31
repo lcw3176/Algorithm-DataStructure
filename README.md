@@ -45,7 +45,7 @@
 
 # Spring
 - [Spring Container, Sevlet Container](https://github.com/lcw3176/CS-CE-Study/blob/master/spring/spring_servlet.md)
-
+- [Spring-Session](https://github.com/lcw3176/CS-CE-Study/blob/master/spring/session.md)
 # DB
 - index
 - transaction
@@ -56,10 +56,8 @@
 ### 할일
 
 #### http https 암호화
-#### 스프링 session 구별
+
 #### Bean Scope
-- 1개의 컨트롤러로 다수의 요청 처리 문제
-- 다수의 사용자가 하나의 객체에 진입 시도 문제
 #### 알람 문제
 - 트위터
 - 유튜브
