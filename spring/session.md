@@ -7,7 +7,7 @@
 ## 세션 추적 & 생성
 - 일반적으로 쿠키를 사용 (JSESSIONID), 유저 식별
 - 요청이 있을 때 생성(getSession() 최초 호출 순간)
-<img src="https://thecodinglog.github.io/assets/2020-08-06-filter-chain/2020-08-06-filter-chain_173534.png">
+<img src="https://thecodinglog.github.io/assets/2020-08-06-filter-chain/2020-08-06-filter-chain_173534.png" width=400>
 
 - Spring-Session 필터는 가장 먼저 실행
 - 필터 재귀 호출 후, 모든 작업이 끝나면 commitSession()을 통해 세션 정보 저장, 쿠키 전달
