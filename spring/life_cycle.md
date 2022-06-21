@@ -25,6 +25,10 @@
 ```
 @PostConstruct와 차이점
 
-PostConstruct는 자바 스펙 요구서에 명시된 스펙으로, 스프링 프레임워크에 의존적이 아니다. 반면 InitializingBean은 스프링 프레임워크에 종속되는 인터페이스를 구현하는 방법으로 스프링 프레임워크에 종속된다. @PreDestroy 또한 마찬가지다
+PostConstruct는 자바 스펙 요구서에 명시된 스펙으로, 
+스프링 프레임워크에 의존적이 아니다. 
+반면 InitializingBean은 스프링 프레임워크에 종속되는 
+인터페이스를 구현하는 방법으로 스프링 프레임워크에 종속된다.
+@PreDestroy 또한 마찬가지다
 ```
 

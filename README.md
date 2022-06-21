@@ -46,6 +46,8 @@
 # Spring
 - [Spring Container, Sevlet Container](https://github.com/lcw3176/CS-CE-Study/blob/master/spring/spring_servlet.md)
 - [Spring-Session](https://github.com/lcw3176/CS-CE-Study/blob/master/spring/session.md)
+- [Spring-Bean-Life-Cycle](https://github.com/lcw3176/CS-CE-Study/blob/master/spring/life_cycle.md)
+- [Spring-MVC](https://github.com/lcw3176/CS-CE-Study/blob/master/spring/spring-mvc.md)
 
 # DB
 - index
@@ -58,7 +60,6 @@
 
 #### http https 암호화
 
-#### Bean Scope
 #### 알람 문제
 - 트위터
 - 유튜브
@@ -68,9 +69,6 @@
 
 #### Java 11
 - HttpClient, String.isBlank()...
-
-#### Spring
-- Bean, Component
 
 #### Mysql User_Level_Lock
 #### Docker
