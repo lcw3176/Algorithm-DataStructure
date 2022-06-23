@@ -22,13 +22,15 @@ class Solution {
             
             for(int j = 2; j < val; j++){
                 if(val % j == 0){
-                    temp.remove(i);
+                    temp.set(i, -1);
                     break;
                 }
             }
         }
-       
-        return temp.size();
+
+        return Long.valueOf(temp.stream()
+            .filter(i -> i != -1)
+            .count()).intValue();
     }
     
     public void permutation(int[] arr, int[] output, boolean[] visited, int depth, int n, int r) {
