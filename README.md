@@ -56,11 +56,5 @@
 - 트위터
 - 유튜브
 
-#### Java 8 
-- Stream, Lambda, Nashorn
-
-#### Java 11
-- HttpClient, String.isBlank()...
-
 #### Mysql User_Level_Lock
 #### Docker
