@@ -42,7 +42,7 @@
 - [Spring-MVC](https://github.com/lcw3176/CS-CE-Study/blob/master/spring/spring-mvc.md)
 
 # DB
-- index
+- [index](https://github.com/lcw3176/CS-CE-Study/blob/master/db/index.md)
 - transaction
 - 멀티인덱싱
 - ElasticSearch
