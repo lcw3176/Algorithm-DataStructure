@@ -30,8 +30,7 @@
 
 # Network
 - [대칭키, 비대칭키](https://github.com/lcw3176/CS-CE-Study/blob/master/network/%EB%8C%80%EC%B9%AD%ED%82%A4%2C%EB%B9%84%EB%8C%80%EC%B9%AD%ED%82%A4.md)
-- [SSL](https://github.com/lcw3176/CS-CE-Study/blob/master/network/SSL.md)
-- [https]
+- [https](https://github.com/lcw3176/CS-CE-Study/blob/master/network/HTTPS.md)
 
 # Java
 - [mutable vs immutable](https://github.com/lcw3176/CS-CE-Study/blob/master/java/mutable_immutable.md)
@@ -43,7 +42,7 @@
 - [Spring-MVC](https://github.com/lcw3176/CS-CE-Study/blob/master/spring/spring-mvc.md)
 
 # DB
-- index
+- [index](https://github.com/lcw3176/CS-CE-Study/blob/master/db/index.md)
 - transaction
 - 멀티인덱싱
 - ElasticSearch
@@ -55,12 +54,6 @@
 #### 알람 문제
 - 트위터
 - 유튜브
-
-#### Java 8 
-- Stream, Lambda, Nashorn
-
-#### Java 11
-- HttpClient, String.isBlank()...
 
 #### Mysql User_Level_Lock
 #### Docker

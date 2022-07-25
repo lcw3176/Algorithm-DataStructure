@@ -1,4 +1,5 @@
-# SSL
+# HTTPS
+
 ## 용어 정리
 - Symmetric key = 대칭키 = 세션키
 - IKE(Internet Key Exchange)
@@ -38,10 +39,23 @@
     - Server public key 전송
 
 - PC -> Server
-    - PC Sym Key 자체를 Server의 public key로 암호화 후 전송
+    - PC Sym Key 자체(private key 해당)를 Server의 public key로 암호화 후 전송
     - Server의 private key로 PC의 Sym key 복호화
 
 ### 데이터 전송
 - PC -> Server
     - PC Sym Key로 평문 암호화, 전송
     - Server는 복호화했던 PC의 Sym Key로 암호화된 데이터 복호화
+
+### 한계
+- 서버의 유효성 검증이 어려움
+    - 연결된 서버 자체가 문제가 있는 경우
+    - 해커에게 정보를 다 전달해주게 됨
+    - 암호화의 의미가 없어짐
+
+## CA
+### 서드파티 서버 검증
+- 서버 인증서
+- 외부에서 서버의 유효성을 검증해 줌
+
+
