@@ -1,21 +1,21 @@
 def solution(id_list, report, k):
-    filtered_dict = {}
     dic = {}
     answer = [0 for i in range(len(id_list))]
-    
-    for users in report:
-        filtered_dict[users] = 0
-
-    for users in filtered_dict:
-        sender, receiver = users.split(" ")
+ 
+    for i in report:
+        from_user, to_user = i.split(" ")
         
-        if receiver not in dic.keys():
-            dic[receiver] = []
-        dic[receiver].append(sender)
-    
+        if to_user not in dic:
+            dic[to_user] = []
+                
+        if from_user in dic[to_user]:
+            continue
+        
+        dic[to_user].append(from_user)
+
     for i in dic:
         if len(dic[i]) >= k:
             for j in dic[i]:
                 answer[id_list.index(j)] += 1
-        
+ 
     return answer
